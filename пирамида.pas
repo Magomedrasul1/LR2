@@ -1,6 +1,6 @@
 Program qw;
 uses crt,Utils;
-type arr=array[0..10000] of integer;
+type arr=array[0..1024] of integer;
  var 
  T1,T2:text;
 procedure Sort(var A: arr; Co: Integer);
@@ -40,28 +40,28 @@ end;
 var a:arr;
     n,i:integer;
 begin
-n:=1000;
+n:=1024;
 assign(T1,'text1.txt');
 assign(T2,'text2.txt');
 randomize;
 rewrite(T1);
 for i:=1 to  n do
 begin
-a[i]:=random(1000);
+a[i]:=random(1024);
 write(t1,a[i],' ');
+write(a[i],' ');
 end;
 close(T1);
 reset(t1);
 for i:=1 to n do
 read(T1,A[i]);
 close(T1);
-clrscr;
 Sort(a,n);
 rewrite(T2);
 for i:=1 to n do
 write(T2,a[i]:4);
 writeln(t2,' ');
-writeln(t2,'Время выполнения программы в милисекундах = ',Milliseconds );
+writeln(t2,'Г‚Г°ГҐГ¬Гї ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г» Гў Г¬ГЁГ«ГЁГ±ГҐГЄГіГ­Г¤Г Гµ = ',Milliseconds );
 close(T2);
 readln
 end.
