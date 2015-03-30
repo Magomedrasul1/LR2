@@ -8,12 +8,17 @@ i, j, k, m,n: integer;
 x: integer;
 h: array [1 .. t] of integer;
 begin
+randomize;
 n:=1024;
 assign(T1,'text1.txt');
 assign(T2,'text2.txt');
-reset(T1);
+rewrite(T1);
 for i:=1 to n do
-read(T1,A[i]);
+begin
+a[i]:=random(1024);
+write(T1,a[i],' ');
+write(a[i],' ');
+end;
 close(T1);
 h[1] := 31; h[2] := 15; h[3] := 7; h[4] := 3; h[5] := 1;
 for m := 1 to T do
@@ -39,9 +44,9 @@ end;
 end;
 rewrite(T2);
 write();
-write('Метод Шелла');
+write('ГЊГҐГІГ®Г¤ ГГҐГ«Г«Г ');
 for j:=1 to n do
 write(T2,a[j]);
-write(t2,'Время выполнения программы в милисекундах = ',Milliseconds );
+write(t2,'Г‚Г°ГҐГ¬Гї ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г» Гў Г¬ГЁГ«ГЁГ±ГҐГЄГіГ­Г¤Г Гµ = ',Milliseconds );
 close(T2);
 end.
