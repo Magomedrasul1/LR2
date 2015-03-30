@@ -13,6 +13,8 @@ function Part(l, r: integer):integer;
 var
   v, i, j, b: integer;
 begin
+
+
   V:=a[r];
   I:=l-1;
   j:=r;
@@ -55,6 +57,8 @@ rewrite(T2);
     begin
       a[k]:=random(1024);
       write(t1,a[k],' ');
+       write(a[k],' ');
+      
     end;
     close(t1);
   QuickSort(1,n);
@@ -62,6 +66,6 @@ rewrite(T2);
   for k:=1 to n do
     write(t2,a[k],'  ');
     writeln(T2,' ');
-    writeln(t2,'Время выполнения программы в милисекундах = ',Milliseconds );
+    writeln(t2,'Г‚Г°ГҐГ¬Гї ГўГ»ГЇГ®Г«Г­ГҐГ­ГЁГї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г» Гў Г¬ГЁГ«ГЁГ±ГҐГЄГіГ­Г¤Г Гµ = ',Milliseconds );
     close(t2)
 end.
